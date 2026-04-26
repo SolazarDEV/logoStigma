@@ -2,7 +2,8 @@
 -- Version: 3.2
 
 -- Instances:
-
+local ScreenGui = Instance.new("ScreenGui")
+local DESECYPT = Instance.new("TextButton")
 local LOGO = Instance.new("ScreenGui")
 local Face = Instance.new("ImageLabel")
 local Orbit = Instance.new("ImageLabel")
@@ -11,6 +12,9 @@ local UICorner = Instance.new("UICorner")
 local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 LOGO.Name = "LOGO"
 LOGO.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -27,7 +31,6 @@ Face.BorderSizePixel = 0
 Face.Position = UDim2.new(-0.0848358572, 0, 0.40941292, 0)
 Face.Size = UDim2.new(0.0988271087, 0, 0.108296312, 0)
 Face.Image = "rbxassetid://110436660484032"
-
 Orbit.Name = "Orbit"
 Orbit.Parent = Face
 Orbit.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -48,8 +51,21 @@ UICorner.Parent = Face
 
 UIAspectRatioConstraint_2.Parent = Face
 
--- Scripts:
 
+DESECYPT.Name = "DESECYPT"
+DESECYPT.Parent = ScreenGui
+DESECYPT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DESECYPT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DESECYPT.BorderSizePixel = 0
+DESECYPT.Position = UDim2.new(0.101221643, 0, 0.836477995, 0)
+DESECYPT.Size = UDim2.new(0, 212, 0, 104)
+DESECYPT.Font = Enum.Font.Ubuntu
+DESECYPT.Text = "Made by Solazar and Roblox_jonh23"
+DESECYPT.TextColor3 = Color3.fromRGB(0, 0, 0)
+DESECYPT.TextSize = 20.000
+DESECYPT.TextWrapped = true
+
+-- Scripts:
 local function LLLBHB_fake_script() -- Orbit.LocalScript 
 	local script = Instance.new('LocalScript', Orbit)
 
@@ -82,3 +98,89 @@ local function JPADOFI_fake_script() -- LOGO.Script
 	script.Parent.ResetOnSpawn = false
 end
 coroutine.wrap(JPADOFI_fake_script)()
+local function FEXD_fake_script() -- DESECYPT.Script 
+	local script = Instance.new('LocalScript', DESECYPT)
+
+	local gui = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	-- Set transparency awal (background + text)
+	gui.BackgroundTransparency = 1
+	
+	-- Jika GUI punya teks (TextLabel / TextButton / TextBox)
+	if gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox") then
+		gui.TextTransparency = 1
+	end
+	
+	wait(3)
+	
+	warn("Outmoon22 loaded DLL Tomato SKid")
+	
+	-- Tween config
+	local tweenInfo = TweenInfo.new(
+		2,                                -- durasi
+		Enum.EasingStyle.Quad,              -- gaya animasi
+		Enum.EasingDirection.Out
+	)
+	
+	-- Goal tween
+	local goal = {
+		BackgroundTransparency = 0,         -- jadi terlihat
+	}
+	
+	-- Kalau ada teks, ikut ditween
+	if gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox") then
+		goal.TextTransparency = 0
+	end
+	
+	-- Buat tween dan jalankan
+	local tween = TweenService:Create(gui, tweenInfo, goal)
+	tween:Play()
+end
+coroutine.wrap(FEXD_fake_script)()
+local function TPZJVAX_fake_script() -- DESECYPT.Close 
+	local script = Instance.new('LocalScript', DESECYPT)
+
+	script.Parent.MouseButton1Click:connect(function()
+		
+		local gui = script.Parent
+		local TweenService = game:GetService("TweenService")
+	
+		-- Set transparency awal (background + text)
+		gui.BackgroundTransparency = 0
+	
+		-- Jika GUI punya teks (TextLabel / TextButton / TextBox)
+		if gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox") then
+			gui.TextTransparency = 0
+		end
+	
+		-- Tween config
+		local tweenInfo = TweenInfo.new(
+			2,                                -- durasi
+			Enum.EasingStyle.Quad,              -- gaya animasi
+			Enum.EasingDirection.Out
+		)
+	
+		-- Goal tween
+		local goal = {
+			BackgroundTransparency = 1,         -- jadi terlihat
+		}
+	
+		-- Kalau ada teks, ikut ditween
+		if gui:IsA("TextLabel") or gui:IsA("TextButton") or gui:IsA("TextBox") then
+			goal.TextTransparency = 1
+		end
+	
+		-- Buat tween dan jalankan
+		local tween = TweenService:Create(gui, tweenInfo, goal)
+		tween:Play()
+		
+		wait(1.8)
+	
+		script.Parent.Parent.DESECYPT.Visible = not script.Parent.Parent.DESECYPT.Visible
+	end)
+	
+	--                                                               ^
+	--]]	Change "DESECYPT" to the name of the frame                 ^                      
+end
+coroutine.wrap(TPZJVAX_fake_script)()
