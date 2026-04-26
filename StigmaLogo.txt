@@ -61,7 +61,7 @@ DESECYPT.BorderSizePixel = 0
 DESECYPT.Position = UDim2.new(0.101221643, 0, 0.836477995, 0)
 DESECYPT.Size = UDim2.new(0, 212, 0, 104)
 DESECYPT.Font = Enum.Font.Ubuntu
-DESECYPT.Text = "Made By Solazar and Roblox_jonh23 Click To Close!"
+DESECYPT.Text = "Project Outmoon22 Made By Solazar Click To Close!"
 DESECYPT.TextColor3 = Color3.fromRGB(0, 0, 0)
 DESECYPT.TextSize = 20.000
 DESECYPT.TextWrapped = true
@@ -116,7 +116,7 @@ local function FEXD_fake_script() -- DESECYPT.Script
 	
 	wait(3)
 	
-	warn("DuckyMemz Loaded")
+	warn("Projet Outmoon22 Loaded")
 	
 	-- Tween config
 	local tweenInfo = TweenInfo.new(
