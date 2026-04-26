@@ -116,7 +116,7 @@ local function FEXD_fake_script() -- DESECYPT.Script
 	
 	wait(3)
 	
-	warn("Projet Outmoon22 Loaded")
+	warn("DuckyMemz Loaded")
 	
 	-- Tween config
 	local tweenInfo = TweenInfo.new(
